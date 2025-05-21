@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turn One Simulators</title>
+    <script defer src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script defer src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script defer src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  </head>
+  <body class="bg-[#121212] text-[#f4f4f4] min-h-screen font-sans">
+    <div id="root"></div>
+    <script type="text/babel">
+      function TurnOneSite() {
+        return (
+          <div className="bg-[#121212] text-[#f4f4f4] min-h-screen font-sans">
+            <header className="bg-[#2c2c2c] text-center py-6">
+              <img src="logo.png" alt="Turn One Simulators Logo" className="h-20 mx-auto" />
+            </header>
+            <nav className="flex justify-center gap-10 bg-[#121212] py-4 font-bold">
+              <a href="#products" className="hover:text-[#e60000]">Products</a>
+              <a href="#contact" className="hover:text-[#e60000]">Contact</a>
+            </nav>
+            <main className="max-w-6xl mx-auto px-6 py-12">
+              <section id="products">
+                <h2 className="text-2xl font-bold mb-6">Our Sim Racing Products</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  <div className="bg-[#2c2c2c] rounded-lg p-6 text-center">
+                    <img src="https://via.placeholder.com/300x200" alt="Wheel" className="rounded mb-4" />
+                    <h3 className="text-[#e60000] text-lg font-semibold mb-2">Sim Racing Wheel</h3>
+                    <p>Precision engineered racing wheel with realistic feedback and durable construction.</p>
+                  </div>
+                  <div className="bg-[#2c2c2c] rounded-lg p-6 text-center">
+                    <img src="https://via.placeholder.com/300x200" alt="Button Box" className="rounded mb-4" />
+                    <h3 className="text-[#e60000] text-lg font-semibold mb-2">Button Box</h3>
+                    <p>Customizable, ergonomic button boxes with LED labeling and USB support.</p>
+                  </div>
+                  <div className="bg-[#2c2c2c] rounded-lg p-6 text-center">
+                    <img src="https://via.placeholder.com/300x200" alt="Wheel Hub" className="rounded mb-4" />
+                    <h3 className="text-[#e60000] text-lg font-semibold mb-2">Wheel Hub</h3>
+                    <p>Heavy-duty aluminum wheel hubs built for maximum compatibility and strength.</p>
+                  </div>
+                </div>
+              </section>
+              <section id="contact" className="mt-20">
+                <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
+                <form className="bg-[#2c2c2c] p-6 rounded-lg space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block">Name</label>
+                    <input type="text" id="name" name="name" required className="w-full p-2 rounded bg-[#1a1a1a] border border-gray-700" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block">Email</label>
+                    <input type="email" id="email" name="email" required className="w-full p-2 rounded bg-[#1a1a1a] border border-gray-700" />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block">Message</label>
+                    <textarea id="message" name="message" rows="6" required className="w-full p-2 rounded bg-[#1a1a1a] border border-gray-700"></textarea>
+                  </div>
+                  <button type="submit" className="bg-[#e60000] text-white px-6 py-2 rounded hover:opacity-90">Send</button>
+                </form>
+              </section>
+            </main>
+            <footer className="bg-[#2c2c2c] text-center py-6 mt-20">
+              <p>&copy; 2025 Turn One Simulators. All rights reserved.</p>
+            </footer>
+          </div>
+        );
+      }
+      ReactDOM.render(<TurnOneSite />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
